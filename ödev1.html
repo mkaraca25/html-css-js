@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+     div{
+        border: 3px solid black;
+        width: 30%;
+        background-color:bisque ;
+        padding: 5px 5px 5px 5px;
+     }
+     button{
+       border: 5px solid black;
+       
+     }
+    </style>
+</head>
+
+<body>
+   
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Adınız:</label>
+            <input type="text" class="form-control" id="adiniz">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Sifre:</label>
+            <input type="password" class="form-control" id="sifre">
+        </div>
+
+
+        <button type="submit" onclick="kontrol()">Giriş Yap </button>
+        <button type="submit" onclick="verisakla()">Kayıt ol</button>
+      
+    </form>
+</body>
+<script>
+ 
+
+    function verisakla() {
+        var adiniz = document.getElementById("adiniz").value;
+        localStorage.setItem('adiniz', adiniz)
+        var sifre = document.getElementById("sifre").value;
+        localStorage.setItem('sifre', sifre)
+    }
+    function kontrol() {
+
+        if (adiniz == adiniz && sifre == sifre) {
+
+            alert("Giriş Başarılı");
+        }
+        else {
+
+            alert("Giriş Başarısız");
+        }
+    }
+</script>
+
+</html>
