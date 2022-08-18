@@ -51,6 +51,8 @@
         localStorage.setItem('sifre', sifre)
     }
     function kontrol() {
+        var adiniz = localStorage.getItem('adiniz');
+            var sifre = localStorage.getItem('sifre');
 
         if (adiniz == document.getElementById("adiniz").value && sifre == document.getElementById("sifre").value) {
 
