@@ -45,16 +45,16 @@
  
 
     function verisakla() {
-        var adiniz = document.getElementById("adiniz").value;
+        var adiniz = document.getElementById('adiniz').value;
         localStorage.setItem('adiniz', adiniz)
-        var sifre = document.getElementById("sifre").value;
+        var sifre = document.getElementById('sifre').value;
         localStorage.setItem('sifre', sifre)
     }
     function kontrol() {
         var adiniz = localStorage.getItem('adiniz');
             var sifre = localStorage.getItem('sifre');
 
-        if (adiniz == document.getElementById("adiniz").value && sifre == document.getElementById("sifre").value) {
+        if ((adiniz == document.getElementById('adiniz').value)&&(sifre == document.getElementById('sifre').value)) {
 
             alert("Giriş Başarılı");
         }
