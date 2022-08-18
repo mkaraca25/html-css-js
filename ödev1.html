@@ -45,23 +45,24 @@
  
 
     function verisakla() {
-        var adiniz = document.getElementById('adiniz').value;
+        var adiniz = document.getElementById('name').value;
         localStorage.setItem('adiniz', adiniz)
         var sifre = document.getElementById('sifre').value;
         localStorage.setItem('sifre', sifre)
     }
     function kontrol() {
-        var adiniz = localStorage.getItem('adiniz');
-            var sifre = localStorage.getItem('sifre');
+            var dataName = localStorage.getItem('adiniz');
+            var dataSifre = localStorage.getItem('sifre');
 
-        if ((adiniz == document.getElementById('adiniz').value)&&(sifre == document.getElementById('sifre').value)) {
 
-            alert("Giriş Başarılı");
-        }
-        else {
-
-            alert("Giriş Başarısız");
-        }
+            if((dataName == document.getElementById('name').value)&&(dataSifre == document.getElementById('sifre').value))
+            {
+               alert('Giris Başarılı!');
+            }
+            else
+            {
+                alert("Giriş Başarısız");
+            }
     }
 </script>
 
